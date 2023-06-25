@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "poetry-demo"
+version = "0.1.0"
+description = ""
+authors = ["Filip Chrzuszcz"]
+readme = "README.md"
+packages = [{include = "thesis"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.0.1"
+scikit-learn = "^1.2.2"
+lightgbm = "^3.3.5"
+networkx = "2.6.3"
+torch = "^1.13"
+pyg-lib = {version = "^0.2.0+pt113cpu", source = "torch-wheels"}
+torch-scatter = {version = "^2.1.1+pt113cpu", source = "torch-wheels"}
+torch-sparse = {version = "^0.6.17+pt113cpu", source = "torch-wheels"}
+torch-cluster = {version = "^1.6.1+pt113cpu", source = "torch-wheels"}
+torch-spline-conv = {version = "^1.2.2+pt113cpu", source = "torch-wheels"}
+torch-geometric-signed-directed = "^0.22.0"
+plotly-express = "^0.4.1"
+nbformat = "^5.9.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+ipykernel = "^6.23.1"
+
+
+[[tool.poetry.source]]
+name = "torch-wheels"
+url = "https://data.pyg.org/whl/torch-1.13.1+cpu.html"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
